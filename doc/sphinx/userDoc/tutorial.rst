@@ -4,25 +4,21 @@ First Steps with IOR
 ====================
 
 This is a short tutorial for the basic usage of IOR and some tips on how to use
-IOR to handel caching effects as these are very likely to affect your
+IOR to handle caching effects as these are very likely to affect your
 measurements.
 
 Running IOR
 -----------
 There are two ways of running IOR:
 
-    1) Command line with arguments -- executable followed by command line
-        options.
-
-        ::
+    1) Command Line with Arguments -- 
+        executable followed by command line options::
             $ ./IOR -w -r -o filename
 
         This performs a write and a read to the file 'filename'.
 
-    2) Command line with scripts -- any arguments on the command line will
-        establish the default for the test run, but a script may be used in
-        conjunction with this for varying specific tests during an execution of
-        the code. Only arguments before the script will be used!
+    2) Command Line with Scripts -- 
+        any command line options set **before** the script option (-f) will establish the default settings when executing the script, but options specified in a script will overwrite command line options and can be used to specify multiple tests with different settings.
 
         ::
             $ ./IOR -W -f script
@@ -30,9 +26,9 @@ There are two ways of running IOR:
         This defaults all tests in 'script' to use write data checking.
 
 
-In this tutorial the first one is used as it is much easier to toy around with
-an get to know IOR. The second option thought is much more useful to safe
-benchmark setups to rerun later or to test many different cases.
+In this tutorial the first option is used as it is easier to play around with
+and learn IOR. The second option is useful for saving
+benchmark setups to rerun later or for running multiple test cases.
 
 
 Getting Started with IOR
